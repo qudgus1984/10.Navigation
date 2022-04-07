@@ -16,17 +16,19 @@ class EditViewController: UIViewController {
     var textWayValue: String = ""
     var textMessage: String = ""
     var delegate : EditDelegate?
-    // 수정화면에서 직접 텍스트 필드의 텍스트를 제어할 수 없기 때문에 변수 textMessage를 문자열로 만듬
+    var isOn = false // 수정화면에서 직접 스위치를 제어할 수 없기 때문에 변수 isOn을 만듬
 
     @IBOutlet var lblWay: UILabel!
     @IBOutlet var txMessage: UITextField!
+    @IBOutlet var swIsOn: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         lblWay.text = textWayValue
         txMessage.text = textMessage
-        // viewDidLoad 함수에서 변수 textMessage 값을 텍스트 필드의 텍스트로 대입하여 나타나게 함
+        swIsOn.isOn = isOn // viewDidLoad 함수에서 변수 isOn 값을 스위치 On에 대입하여 스위치 값이 출력되게 함
     }
     
     @IBAction func btnDone(_ sender: UIButton) {

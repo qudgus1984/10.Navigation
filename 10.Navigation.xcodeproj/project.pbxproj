@@ -14,6 +14,8 @@
 		2F77A2C127FEBE7D0013E323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2C027FEBE7D0013E323 /* Assets.xcassets */; };
 		2F77A2C427FEBE7D0013E323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2C227FEBE7D0013E323 /* LaunchScreen.storyboard */; };
 		2F77A2CC27FEC3770013E323 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A2CB27FEC3770013E323 /* EditViewController.swift */; };
+		2F77A2CF27FED50E0013E323 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2CD27FED50E0013E323 /* lamp_off.png */; };
+		2F77A2D027FED50E0013E323 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2CE27FED50E0013E323 /* lamp_on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2F77A2C327FEBE7D0013E323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F77A2C527FEBE7D0013E323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F77A2CB27FEC3770013E323 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		2F77A2CD27FED50E0013E323 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		2F77A2CE27FED50E0013E323 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		2F77A2B627FEBE7B0013E323 /* 10.Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				2F77A2CD27FED50E0013E323 /* lamp_off.png */,
+				2F77A2CE27FED50E0013E323 /* lamp_on.png */,
 				2F77A2B727FEBE7B0013E323 /* AppDelegate.swift */,
 				2F77A2B927FEBE7B0013E323 /* SceneDelegate.swift */,
 				2F77A2BB27FEBE7B0013E323 /* ViewController.swift */,
@@ -130,7 +136,9 @@
 			files = (
 				2F77A2C427FEBE7D0013E323 /* LaunchScreen.storyboard in Resources */,
 				2F77A2C127FEBE7D0013E323 /* Assets.xcassets in Resources */,
+				2F77A2D027FED50E0013E323 /* lamp_on.png in Resources */,
 				2F77A2BF27FEBE7B0013E323 /* Main.storyboard in Resources */,
+				2F77A2CF27FED50E0013E323 /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
