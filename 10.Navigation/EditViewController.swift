@@ -9,6 +9,7 @@ import UIKit
 
 protocol EditDelegate {
     func didMessageEditDone(_ controller: EditViewController, message: String)
+    func didImageOnOffDone(_ controller: EditViewController, isOn: Bool)
 }
 
 class EditViewController: UIViewController {
@@ -16,25 +17,35 @@ class EditViewController: UIViewController {
     var textWayValue: String = ""
     var textMessage: String = ""
     var delegate : EditDelegate?
-    var isOn = false // 수정화면에서 직접 스위치를 제어할 수 없기 때문에 변수 isOn을 만듬
+    var isOn = false
 
-    @IBOutlet var lblWay: UILabel!
     @IBOutlet var txMessage: UITextField!
+    @IBOutlet var lblWay: UILabel!
     @IBOutlet var swIsOn: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         lblWay.text = textWayValue
         txMessage.text = textMessage
-        swIsOn.isOn = isOn // viewDidLoad 함수에서 변수 isOn 값을 스위치 On에 대입하여 스위치 값이 출력되게 함
+        swIsOn.isOn = isOn
+    }
+    
+    // 전구 켜고 끄기
+    @IBAction func swImageOnOff(_ sender: UISwitch) {
+        if sender.isOn {
+            isOn = true
+        } else {
+            isOn = false
+        }
     }
     
     @IBAction func btnDone(_ sender: UIButton) {
         if delegate != nil {
             delegate?.didMessageEditDone(self, message: txMessage.text!)
+            delegate?.didImageOnOffDone(self, isOn: isOn)
         }
+        // 메인화면으로 이동하기
         _ = navigationController?.popViewController(animated: true)
     }
     
