@@ -14,6 +14,7 @@ class ViewController: UIViewController, EditDelegate {
     
     var isOn = true
     
+
     @IBOutlet var txMessage: UITextField!
     @IBOutlet var imgView: UIImageView!
     
